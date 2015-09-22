@@ -14,6 +14,7 @@
 	<link href="css/font-awesome.min.css" rel="stylesheet" type='text/css'>
 	<link href="css/slides.css" rel="stylesheet" type='text/css'>
 	<link href="css/contact_form.css" rel="stylesheet" type='text/css'>
+	<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
 	
 	<!-- Font includes //-->
 	<link href='http://fonts.googleapis.com/css?family=Wellfleet' rel='stylesheet' type='text/css'>
@@ -26,6 +27,7 @@
 	<!-- <script src="js/jquery-2.1.4.js" type="text/javascript"></script> //-->
 	
 	<script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+	<script type="text/javascript" src="js/jquery.tooltipster.min.js"></script>
 	<script src="js/jquery.zrssfeed.min.js" type="text/javascript"></script>
 	<script src="js/jquery.slides.min.js" type="text/javascript"></script>
 	<script src="js/contact_form.js" type="text/javascript"></script>
@@ -78,7 +80,13 @@
 		});
 		
 
-		</script>
+	</script>
+		
+	<script type="text/javascript"> <!-- jQuery tooltip, figure out how to stylize these bitches //-->
+		$(document).ready(function() {
+			$('.tooltip').tooltipster();
+		});
+	</script>
 </head>
 
 <body>
@@ -87,10 +95,10 @@
 	<div id="nav">
 	<!-- add bubble notification effect on mouseover to display titles //-->
 		<div>
-			<a href="#contact"><div class="icon-homeicon">
-				<div class="icon-abouticon">
-					<div class="icon-porticon">
-						<div class="icon-contact">
+			<a href="#contact"><div class="icon-homeicon tooltip" title="Home">
+				<div class="icon-abouticon tooltip" title="About Me">
+					<div class="icon-porticon" title="Portfolio">
+						<div class="icon-contact" title="Contact">
 						</div>
 					</div>
 				</div>
@@ -105,11 +113,11 @@
 	<nav id="social">
 	<!-- add bubble notification effect on mouseover to display titles //-->
 		<ul>
-			<li><a href="#" title="Next Section" ><img src="img/icons/sm/linkedinicon.png" title="Connect on LinkedIn." align="right" /></a></li>
-			<li><a href="#" title="Next Section"><img src="img/icons/sm/facebookicon.png" title="Like my page on Facebook." align="right" /></a></li>
-			<li><a href="#" title="Next Section"><img src="img/icons/sm/twittericon.png" title="Follow me on Twitter." align="right" /></a></li>
-			<li><a  href="#" title="Next Section"><img src="img/icons/sm/gplusicon.png" title="Add me to your circle on Google+." align="right" /></a></li>
-			<li><a href="#" title="Next Section"><img src="img/icons/sm/deviantarticon.png" title="Follow me on DeviantArt." align="right" /></a></li>
+			<li><a href="https://www.linkedin.com/in/mmtjost" target="_blank"><img src="img/icons/sm/linkedinicon.png" class="tooltip" title="Connect on LinkedIn." align="right" /></a></li>
+			<li><a href="#" target="_blank"><img src="img/icons/sm/facebookicon.png" class="tooltip"  title="Like my page on Facebook." align="right" /></a></li>
+			<li><a href="https://twitter.com/makeshift_tjost" target="_blank"><img src="img/icons/sm/twittericon.png" class="tooltip"  title="Follow me on Twitter." align="right" /></a></li>
+			<li><a  href="https://plus.google.com/u/1/107111961993574640344/posts/p/pub" target="_blank"><img src="img/icons/sm/gplusicon.png" class="tooltip"  title="Add me to your circle on Google+." align="right" /></a></li>
+			<li><a href="http://drtask.deviantart.com/" target="_blank"><img src="img/icons/sm/deviantarticon.png" class="tooltip"  title="Follow me on DeviantArt." align="right" /></a></li>
 		</ul>
 	</nav>
 </header>
@@ -121,10 +129,15 @@
 </div>
 
 <div id="bio"><!-- slide 2 //-->
-	<div id="introblock">
-		<h2>This is the beginning of</h2>
-		<h1>Lorem Ipsum</h1>
-		<h3>Some more text goes here.</h3>
+	<div id="introblock" class="intro">
+		<h2>A timeless brand starts with</h2>
+		<h1>Innovative concepts.</h1>
+		<hr>	
+		<p><h3>Write a killer elevator speech to go right here.</h3>
+		
+		<p>Suspendisse posuere, ante in blandit varius, arcu massa condimentum nunc, quis bibendum eros est a mi. Integer dapibus ac nunc sed sollicitudin. Etiam elementum, nisi in commodo lacinia, sapien orci tincidunt sapien, eget cursus mauris urna vitae sem. Etiam pellentesque, leo sed volutpat ultricies, sem arcu sagittis ligula, ut placerat eros metus vel ipsum.</p>
+			
+		<p>Suspendisse posuere, ante in blandit varius, arcu massa condimentum nunc, quis bibendum eros est a mi. Integer dapibus ac nunc sed sollicitudin. Etiam elementum, nisi in commodo lacinia, sapien orci tincidunt sapien, eget cursus mauris urna vitae sem. Etiam pellentesque, leo sed volutpat ultricies, sem arcu sagittis ligula, ut placerat eros metus vel ipsum.Suspendisse posuere, ante in blandit varius, arcu massa condimentum nunc, quis bibendum eros est a mi. Integer dapibus ac nunc sed sollicitudin. Etiam elementum, nisi in commodo lacinia, sapien orci tincidunt sapien, eget cursus mauris urna vitae sem. Etiam pellentesque, leo sed volutpat ultricies, sem arcu sagittis ligula, ut placerat eros metus vel ipsum.</p></p>
 	</div>
 	
 	<div class="clearleft">
@@ -136,14 +149,26 @@
 			</script>
 		</div>
 		
-		<div id="about">
-			<h1>About Me</h1>
-			<p>Something will go here.</p>
+		<div id="about" class="about">
+			<p><h2>"a self taught programmer</h2>
+			<h1>with roots in art and design."</h1></p>
+			<hr>
+			<div class="about_teaser">
+				<p>I aspire to bring the absolute best, cutting edge designs to my clients. Utilizing the latest technology available for design and development, I raise the bar beyond expectations with focus on innovation and cost effectiveness kept in mind.</p>
+			</div>
+			
+			<hr class="mid_abouthr">
+			
+			<p>Suspendisse posuere, ante in blandit varius, arcu massa condimentum nunc, quis bibendum eros est a mi. Integer dapibus ac nunc sed sollicitudin. Etiam elementum, nisi in commodo lacinia, sapien orci tincidunt sapien, eget cursus mauris urna vitae sem. Etiam pellentesque, leo sed volutpat ultricies, sem arcu sagittis ligula, ut placerat eros metus vel ipsum.Suspendisse posuere, ante in blandit varius, arcu massa condimentum nunc, quis bibendum eros est a mi. Integer dapibus ac nunc sed sollicitudin. Etiam elementum, nisi in commodo lacinia, sapien orci tincidunt sapien, eget cursus mauris urna vitae sem. Etiam pellentesque, leo sed volutpat ultricies, sem arcu sagittis ligula, ut placerat eros metus vel ipsum. Suspendisse posuere, ante in blandit varius, arcu massa condimentum nunc, quis bibendum eros est a mi. Integer dapibus ac nunc sed sollicitudin.</p>
+			
+			<p>Pellentesque tempus rutrum neque non dictum. Etiam vitae tempus tellus. Integer volutpat ligula quis urna sollicitudin, in cursus dui pretium. Mauris a velit porta, lobortis elit sed, luctus orci.Suspendisse posuere, ante in blandit varius, arcu massa condimentum nunc, quis bibendum eros est a mi. Integer dapibus ac nunc sed sollicitudin. Etiam elementum, nisi in commodo lacinia, sapien orci tincidunt sapien, eget cursus mauris urna vitae sem. Etiam pellentesque, leo sed volutpat ultricies, sem arcu sagittis ligula, ut placerat eros metus vel ipsum.</p>
+			
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sollicitudin, ipsum porta pulvinar ultrices, sem magna laoreet libero, sit amet iaculis ex orci eget nulla. Donec id erat vitae quam mollis pharetra eu cursus diam. Suspendisse sed efficitur nulla. Aenean non cursus diam, vel commodo libero. Sed semper a magna non vestibulum. Nam non fringilla purus. Curabitur interdum sodales velit sit amet sodales. Vestibulum ullamcorper erat nec dictum ultrices. Donec dui ligula, pellentesque sit amet faucibus in, cursus a augue.</p>
 		</div> 
 	</div>
 </div>
 
-<div id="stats"><!-- slide 3 //-->
+<div id="port"><!-- slide 3 //-->
 
 <!-- this may make another appearance, don't delete yet //-->
 <!--		<canvas id="draw"></canvas>
@@ -191,17 +216,22 @@
     });
 	</script>
 <!-- End portfolio slideshow //-->
+	
+	<br />
+	<hr class="btm_abouthr">
 </div>
 
-<div id="blogfeed">
+<div id="stats" class="stats"> <!-- slide 4 //-->
 		<!-- three column feed showing three most recent articles //-->
 		<!-- blog will most likely be ran on Joomla! CMS //-->
+		<h1>Stats and Endorsements</h1>
+		<hr class="stats_tophr">
 </div>
 
-<div id="contact">
+<div id="contact"> <!-- slide 5 //-->
 		<!-- contact info. Probably 4 columns listing various info //-->
 		<!-- may include a direct email contact form //-->
-	<div id="contactTop">
+	<div id="contactTop"> <!-- contact title bar, fill space here //-->
 		<br />
 		<br />
 		<br />
@@ -215,50 +245,93 @@
 		<a href="#contact"><h1>Feel free to Contact Me</h1></a>
 	</div>
 	<br />
-	<hr>
-	<div id="contactMain">
-		<div id="clients">
-			<h3>List clients</h3>
+	<hr class="mid_contacthr">
+	
+	<div id="contactMain" class="contact_font"> <!-- contact columns //-->
+		<div id="contact_column" class=" contactlink"> <!-- Gigs list //-->
+			<p><h3> · · Current gigs around the interwebs · ·</h3>
+			<hr>
 			<br />
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sollicitudin, ipsum porta pulvinar ultrices, sem magna laoreet libero, sit amet iaculis ex orci eget nulla. Donec id erat vitae quam mollis pharetra eu cursus diam. Suspendisse sed efficitur nulla. Aenean non cursus diam, vel commodo libero. Sed semper a magna non vestibulum. Nam non fringilla purus. Curabitur interdum sodales velit sit amet sodales. Vestibulum ullamcorper erat nec dictum ultrices. Donec dui ligula, pellentesque sit amet faucibus in, cursus a augue. Mauris condimentum accumsan nisi sed eleifend. Proin aliquet arcu sit amet metus placerat, sit amet sollicitudin est iaculis.</p>
-			
-			<p>Pellentesque tempus rutrum neque non dictum. Etiam vitae tempus tellus. Integer volutpat ligula quis urna sollicitudin, in cursus dui pretium. Mauris a velit porta, lobortis elit sed, luctus orci.Suspendisse posuere, ante in blandit varius, arcu massa condimentum nunc, quis bibendum eros est a mi. Integer dapibus ac nunc sed sollicitudin. Etiam elementum, nisi in commodo lacinia, sapien orci tincidunt sapien, eget cursus mauris urna vitae sem. Etiam pellentesque, leo sed volutpat ultricies, sem arcu sagittis ligula, ut placerat eros metus vel ipsum.</p>
+			<p><h3>Fiverr Gig 1</h3>
+			<a href="" class="tooltip" title="Quick shpeal 1">Fiverr link</a></p>
+			<hr>
+			<p><h3>Fiverr Gig 2</h3>
+			<a href="" class="tooltip" title="Quick shpeal 2">Fiverr link</a></p>
+			<hr>
+			<p><h3>Upwork Gig 1</h3>
+			<a href="" class="tooltip" title="Quick shpeal 3">Upwork link</a></p>
+			<hr>
+			<p><h3>Upwork Gig 2</h3>
+			<a href="" class="tooltip" title="Quick shpeal 4">Upwork link</a></p>
+			<hr>
 		</div>
-		<div>
-			<h3>List Social Media Profiles</h3>
+		<div id="contact_column" class="contacth2 contactlink"> <!-- social media list //-->
+			<p><h3>· · Social Media Channels · ·</h3>
+			<hr>
 			<br />
-			<p>Mauris rutrum leo vitae dignissim mollis. Integer a aliquam lacus, eget facilisis urna. Sed rutrum enim sit amet ligula dignissim, eget porta erat pulvinar. Duis ultricies malesuada purus at vulputate. Suspendisse potenti. Fusce tristique interdum mi, vel accumsan erat sodales non. Nulla fringilla, massa non egestas dignissim, ex nulla commodo odio, sed placerat turpis dui vel nisl. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aliquam eget tortor at purus faucibus fringilla eget ut urna. Duis at imperdiet ipsum. Suspendisse et ligula sed justo laoreet dapibus. Praesent velit elit, pharetra sed urna at, condimentum pellentesque magna.</p>
-			
-			<p>Duis ullamcorper non leo in aliquam. Donec eget eros ac lectus porttitor venenatis quis quis tellus. Fusce vitae odio ex. Etiam tempor eleifend libero, vel sodales elit consectetur sit amet. Sed sed iaculis purus.Suspendisse posuere, ante in blandit varius, arcu massa condimentum nunc, quis bibendum eros est a mi. Integer dapibus ac nunc sed sollicitudin. Etiam elementum, nisi in commodo lacinia, sapien orci tincidunt sapien, eget cursus mauris urna vitae sem. Etiam pellentesque, leo sed volutpat ultricies, sem arcu sagittis ligula, ut placerat eros metus vel ipsum.</p></p>
+			<h3>Follow me on Twitter:</h3>
+			<p><div class="icon-birdtwittericon tooltip" title="Follow me on Twitter">&nbsp;&nbsp;&nbsp;<a href="http://twitter.com/makeshift_tjost" target="_blank">twitter.com/makeshift_tjost </div></a></p>
+			<hr>
+			<h3>Add me to your circle on Google+</h3>
+			<p><div class="icon-gplusicon tooltip" title="Follow me on Google+">&nbsp;&nbsp;&nbsp;<a href="https://plus.google.com/u/1/107111961993574640344/posts/p/pub" target="_blank">plus.google.com/... /posts </div></a></p>
+			<hr>
+			<h3>Connect with me on LinkedIn</h3>
+			<p><div class="icon-linkedinicon tooltip" title="Connect with me on LinkedIn">&nbsp;&nbsp;&nbsp;<a href="https://www.linkedin.com/in/mmtjost" target="_blank">linkedin.com/in/mmtjost</div></a></p>
+			<hr>
+			<h3>Like my page on Facebook</h3>
+			<p><div class="icon-facebookicon tooltip" title="Like my page on Facebook">&nbsp;&nbsp;&nbsp;<a href="#getfacebookurl" target="_blank">getfacebookurl.com </div></a></p>
+			<hr>
+			<h3>Follow me on Github</h3>
+			<p><div class="icon-giticon tooltip" title="Follow me on Github">&nbsp;&nbsp;&nbsp;<a href="https://github.com/coste1" target="_blank">github.com/coste1</div></a></p></p>
+			<hr>
+			<p><h2>Reach out and speak to me!</h2></p>
 		</div>
-		<div id="clients">
-			<h3>List reviews</h3>
+		<div id="contact_column"> <!-- build list; get logos for all available sites and change over from list //-->
+			<p><h3>· · So, what did I use to build this site with, anyways? · ·</h3>
+			<hr>
 			<br />
-			<p>Suspendisse posuere, ante in blandit varius, arcu massa condimentum nunc, quis bibendum eros est a mi. Integer dapibus ac nunc sed sollicitudin. Etiam elementum, nisi in commodo lacinia, sapien orci tincidunt sapien, eget cursus mauris urna vitae sem. Etiam pellentesque, leo sed volutpat ultricies, sem arcu sagittis ligula, ut placerat eros metus vel ipsum.</p>
+			<p>I did some thinking and decided I would list what all this site was built with:</p>
 			
-			<p>Suspendisse posuere, ante in blandit varius, arcu massa condimentum nunc, quis bibendum eros est a mi. Integer dapibus ac nunc sed sollicitudin. Etiam elementum, nisi in commodo lacinia, sapien orci tincidunt sapien, eget cursus mauris urna vitae sem. Etiam pellentesque, leo sed volutpat ultricies, sem arcu sagittis ligula, ut placerat eros metus vel ipsum.Suspendisse posuere, ante in blandit varius, arcu massa condimentum nunc, quis bibendum eros est a mi. Integer dapibus ac nunc sed sollicitudin. Etiam elementum, nisi in commodo lacinia, sapien orci tincidunt sapien, eget cursus mauris urna vitae sem. Etiam pellentesque, leo sed volutpat ultricies, sem arcu sagittis ligula, ut placerat eros metus vel ipsum. Suspendisse posuere, ante in blandit varius, arcu massa condimentum nunc, quis bibendum eros est a mi. Integer dapibus ac nunc sed sollicitudin.</p>
+			<p><ul>
+				<li>HTML5</li>
+				<li>Javascript</li>
+				<li>CSS 3.0</li>
+				<li>jQuery</li>
+				<li>Slide.JS</li>
+				<li>Tooltipster</li>
+				<li>ZRSSFeed</li>
+				<li>Fontastic.me</li>
+				<li>Google</li>
+				<li>Self motivation</li>
+			</ul></p></p>
 		</div>
-		<div>
+		<div id="contact_column"> <!-- email form //-->
 			<div id="emailform">
-				<h3>Email Me</h3>
+				<p><h3>· · Direct line to me · ·</h3>
+				<hr>
 				<!-- Required Div Starts Here -->
 				<form id="form">
 					<p id="returnmessage"></p>
 					<label>Name: <span>*</span></label>
-					<input type="text" id="name" placeholder="Name"/>
+					<input type="text" id="name" placeholder="Name" title="Put your name here." class="tooltip" />
 					<br />
 					<label>Email: <span>*</span></label>
-					<input type="text" id="email" placeholder="Email"/>
+					<input type="text" id="email" placeholder="Email" title="Now I need your email." class="tooltip" />
 					<br />
 					<label>Contact Number: <span>*</span></label>
-					<input type="text" id="phone" placeholder="10 digit Mobile no."/>
+					<input type="text" id="phone" placeholder="10 digit Mobile no." title="What's a good number to reach you at?" class="tooltip" />
 					<br />
 					<label>Message:</label>
-					<textarea id="message" placeholder="Message......."></textarea>
-					<input type="button" id="submit" value="Send Message"/>
-				</form>
+					<textarea id="message" placeholder="Message......." title="Let me know your thoughts!" class="tooltip"></textarea>
+					<input type="button" id="submit" value="Send Message" title="Shoot me your message!" class="tooltip" />
+				</form></p>
 			</div>
 		</div>
+	</div>
+	
+	<div id="copyright"> <!-- copyright bar //-->
+		<div background: "#3d372b"; width: 1%; float: left; z-index: 110;></div>
+		<a href="#">Copyright © 2015 TJ Designs</a>
 	</div>
 </div>
 </body>
